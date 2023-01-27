@@ -1,0 +1,15 @@
+// Unit 3, Module 4
+
+public class FactorialExample {
+
+    public static void main (String[] argv)
+    {
+	System.out.println ( "3! = " + factorial(3) );
+	System.out.println ( "5! = " + factorial(5) );
+	System.out.println ( "5! x 3! = " + factorial(3) * (factorial(5)) );
+
+
+	
+    }
+
+}
