@@ -1,0 +1,11 @@
+// Unit 3, Module 4
+
+public class PowerExample6 {
+
+    public static void main (String[] argv)
+    {
+	int p = power (3, 4);
+	System.out.println ( "3^4 = " + p);
+    }
+
+}
