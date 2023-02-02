@@ -1,0 +1,12 @@
+// Unit 3, Module 4
+
+public class Manhattan {
+
+    public static void main (String[] arv)
+    {
+	int r = 1, c = 1;
+	int n = countPaths (r, c);
+	System.out.println ("r=" + r + " c=" + c + " -> n=" + n);
+    }
+
+}
