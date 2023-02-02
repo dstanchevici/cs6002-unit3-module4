@@ -1,0 +1,11 @@
+public class Fibonacci {
+
+    public static void main (String[] argv) 
+    {
+	int n = 5;
+	int f = fibonacci (n);
+	System.out.println ("f(" + n + ") = " + f);
+    }
+
+    
+}

@@ -1,0 +1,39 @@
+
+public class ManhattanWithCallCount {
+
+    static int numCalls;
+
+    public static void main (String[] argv)
+    {
+        // Test case 1: go from (2,2) to (0,0)
+	int r = 2;
+	int c = 2;
+	numCalls = 0;
+	int n = countPaths (r, c);
+	System.out.println ("r=" + r + " c=" + c + " => n=" + n + "; numCalls=" + numCalls);
+/*
+        // Test case 2: go from (5,7) to (0,0)
+	r = 5;
+	c = 7;
+	numCalls = 0;
+	n = countPaths (r, c);
+	System.out.println ("r=" + r + " c=" + c + " => n=" + n + "; numCalls=" + numCalls);
+*/
+    }
+
+
+    static int countPaths (int numRows, int numCols)
+    {
+	numCalls ++;
+
+        // Bottom-out case:
+	if ( (numRows == 0) || (numCols == 0) ) {
+	    return 1;
+	}
+
+	// Otherwise, reduce to two sub-problems and add.
+        int downCount = countPaths (numRows-1, numCols);
+	int rightCount = countPaths (numRows, numCols-1);
+	return (downCount + rightCount);
+    }
+}
