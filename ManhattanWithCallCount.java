@@ -22,6 +22,7 @@ public class ManhattanWithCallCount {
 	n = countPaths (r, c);
 	System.out.println ("r=" + r + " c=" + c + " => n=" + n + "; numCalls=" + numCalls);
 
+
     }
 
 
@@ -41,6 +42,17 @@ public class ManhattanWithCallCount {
         int downCount = countPaths (numRows-1, numCols);
 	int rightCount = countPaths (numRows, numCols-1);
 	gridValues[numRows][numCols] = downCount + rightCount;
+	// printGrid();
+	// System.out.println ("----------------");
 	return gridValues[numRows][numCols];
+    }
+
+    static void printGrid() {
+	for (int i=0; i<gridValues.length; i++) {
+	    for (int j=0; j<gridValues[i].length; j++) {
+		System.out.print (gridValues[i][j] + " ");
+	    }
+	    System.out.println ();
+	}
     }
 }
