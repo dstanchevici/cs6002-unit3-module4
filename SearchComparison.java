@@ -64,10 +64,12 @@ public class SearchComparison {
 	    return true;
         }
         else if (value < A[mid]) {
+	    comparisonCount++;
 	    // Search the left half: A[start],...,A[mid-1]
             return binarySearch (A, value, start, mid-1);
         }
         else {
+	    comparisonCount++;
             // Search the right half: A[mid+1],...,A[end]
             return binarySearch (A, value, mid+1, end);
         }
